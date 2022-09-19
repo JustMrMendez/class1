@@ -26,7 +26,6 @@ body {
 
 .postcard:hover{
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
 }
 
 .postcard-header {
@@ -37,9 +36,15 @@ body {
 	width: 50px;
 	height: 50px;
 }
+.postcard-header img:hover {
+	transform: scale(1.05);
+	transition: all 0.3s ease;
+	filter: drop-shadow(0px 0px 5px rgba(12, 22, 161, 0.425));
+	
+}
 .postcard-header h1 {
 	width: 350px;
-	margin: none;
+	margin: 0;
 }
 
 .postcard-body {

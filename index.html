@@ -25,14 +25,27 @@
           <p>This is so cool, cant wait to start doing more stuff!</p>
         </div>
         <div class="body-right">
-          <input type="text" placeholder="Some Name"  name="" id="" />
-          <input type="text" placeholder="Some Email" name="" id="" />
-          <input type="text" placeholder="Some Comment" name="" id="" />
+          <input type="text" placeholder="Some Name"  name="" id="name" />
+          <input type="text" placeholder="Some Email" name="" id="email" />
+          <input type="text" placeholder="Some Comment" name="" id="comment" />
         </div>
       </div>
       <div class="postcard-footer">
-        <button>Send My Postcard</button>
+        <button id="send">Send My Postcard</button>
       </div>
     </div>
   </body>
 </html>
+
+<script>
+  to_name = document.getElementById("name");
+  email = document.getElementById("email");
+  comment = document.getElementById("comment");
+  document.querySelector("#send").addEventListener("click", () => {
+    if (to_name.value == "" || email.value == "" || comment.value == "") {
+      alert("Please fill out all the fields");
+    } else {
+      alert("Your postcard has been sent!");
+    }
+  });
+</script>
